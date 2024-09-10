@@ -12,14 +12,14 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 # Employee model
-class Employee(Base):
-    __tablename__ = "employees"
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
-    age = Column(Integer)
-    department = Column(String)
+# class Employee(Base):
+#     __tablename__ = "employees"
+#     id = Column(Integer, primary_key=True, index=True)
+#     name = Column(String, index=True)
+#     age = Column(Integer)
+#     department = Column(String)
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 # Pydantic model for request/response
 class EmployeeCreate(BaseModel):
