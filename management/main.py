@@ -27,13 +27,13 @@ class EmployeeCreate(BaseModel):
     age: int
     department: str
 
-# class EmployeeResponse(EmployeeCreate):
-#     id: int
+class EmployeeResponse(EmployeeCreate):
+    id: int
 
-#     class Config:
-#         orm_mode = True
+    class Config:
+        orm_mode = True
 
-# FastAPI app
+FastAPI app
 app = FastAPI()
 
 # Dependency to get DB session
